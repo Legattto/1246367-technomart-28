@@ -10,11 +10,17 @@
 <body>
   <header class="main-header">
     <div class="up-container">
-      <a href="index.html"><img src="img/Header_logo_texnomart.png" alt="Логотип компании Техномарт" width="220" height="47"></a>
-      <a>Поиск</a>
-      <a>Закладки</a>
-      <a>Корзина</a>
-      <a>Оформить заказ</a>
+      <a href="index.html"><img src="img/Header_logo_texnomart.png" alt="Логотип компании Техномарт" width="220"
+          height="47"></a>
+      <ul>
+        <li>
+          <label for="header-search">Поиск</label;>
+            <input type="search" name="search" id="header-search" aria-label="Строка поиска">
+        </li>
+        <li><button type="button" aria-label="Кнопка закладки">Закладки</button></li>
+        <li><button type="button" aria-label="Кнопка корзины">Корзина</button></li>
+        <li><button type="button" aria-label="Кнопка оформить заказ">Оформить заказ</button></li>
+      </ul>
     </div>
     <div>
       <p>
@@ -29,13 +35,13 @@
         г.Санкт-Петербург, ул.Б. Конюшенная, д. 19/8
       </address>
       <div>
-        <a>Кнопка логина</a>
-        <a>Равшан Джамшутович</a>
-        <a>Выйти из аккаунта</a>
+        <a href="blank.html">Аккаунт</a>
+        <a href="">Равшан Джамшутович</a>
+        <button type="button">Выйти из аккаунта</button>
       </div>
       <ul>
-        <li><a>Мои заказы</a></li>
-        <li><a>Личный кабинет</a></li>
+        <li><a href="blank.html">Мои заказы</a></li>
+        <li><a href="blank.html">Личный кабинет</a></li>
       </ul>
     </div>
     <nav class="main-navigate">
@@ -53,61 +59,63 @@
   <main class="main-catalog">
     <ul>
       <li><a href="index.html"></a></li>
-      <li><a href="">Каталог</a></li>
+      <li><a href="#">Каталог</a></li>
       <li><a href="">Инструмент</a></li>
       <li><a href="">Перфораторы</a></li>
     </ul>
     <h1>Перфораторы</h1>
     <section>
-      <h2>Каталог товаров</h2>
+      <h2 class="visually-hidden">Каталог товаров</h2>
       <section>
-        <div>
-          <h2>Фильтр:</h2>
-          <span>Цена</span>
-          <span>Ползунок с ценой</span>
-          <span>0</span>
-          <span>-</span>
-          <span>30000</span>
-        </div>
-        <div>
-          <h3>Производители:</h3>
-          <ul>
-            <li>
-              <input type="checkbox" name="BOSCH" id="bosch" checked>
-              <label for="bosch">BOSCH</label>
-            </li>
-            <li>
-              <input type="checkbox" name="ИНТЕРСКОЛ" id="interskol">
-              <label for="interskol">ИНТЕРСКОЛ</label>
-            </li>
-            <li>
-              <input type="checkbox" name="MAKITA" id="makita" checked>
-              <label for="makita">MAKITA</label>
-            </li>
-            <li>
-              <input type="checkbox" name="DEWALT" id="dewalt">
-              <label for="dewalt">DEWALT</label>
-            </li>
-            <li>
-              <input type="checkbox" name="HITACHI" id="hitachi">
-              <label for="hitachi">HITACHI</label>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3>Питание:</h3>
-          <ul>
-            <li>
-              <input type="radio" name="battrytipe" value="a" id="battry" checked>
-              <label for="battry">Аккумуляторные</label>
-            </li>
-            <li>
-              <input type="radio" name="battrytipe" value="b" id="networck">
-              <label for="networck">Сетевые</label>
-            </li>
-          </ul>
-        </div>
-        <a>Показать</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div>
+            <h2>Фильтр:</h2>
+            <span>Цена</span>
+            <span>Ползунок с ценой</span>
+            <span>0</span>
+            <span>-</span>
+            <span>30000</span>
+          </div>
+          <div>
+            <h3>Производители:</h3>
+            <ul>
+              <li>
+                <input type="checkbox" name="BOSCH" id="bosch" checked>
+                <label for="bosch">BOSCH</label>
+              </li>
+              <li>
+                <input type="checkbox" name="ИНТЕРСКОЛ" id="interskol">
+                <label for="interskol">ИНТЕРСКОЛ</label>
+              </li>
+              <li>
+                <input type="checkbox" name="MAKITA" id="makita" checked>
+                <label for="makita">MAKITA</label>
+              </li>
+              <li>
+                <input type="checkbox" name="DEWALT" id="dewalt">
+                <label for="dewalt">DEWALT</label>
+              </li>
+              <li>
+                <input type="checkbox" name="HITACHI" id="hitachi">
+                <label for="hitachi">HITACHI</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Питание:</h3>
+            <ul>
+              <li>
+                <input type="radio" name="battrytipe" value="a" id="battry" checked>
+                <label for="battry">Аккумуляторные</label>
+              </li>
+              <li>
+                <input type="radio" name="battrytipe" value="b" id="networck">
+                <label for="networck">Сетевые</label>
+              </li>
+            </ul>
+          </div>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
         <div>

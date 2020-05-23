@@ -11,10 +11,15 @@
   <header class="main-header">
     <div class="up-container">
       <a href="#"><img src="img/Header_logo_texnomart.png" alt="Логотип компании Техномарт" width="220" height="47"></a>
-      <a>Поиск</a>
-      <a>Закладки</a>
-      <a>Корзина</a>
-      <a>Оформить заказ</a>
+        <ul>
+          <li>
+            <label for="header-search">Поиск</label;>
+              <input type="search" name="search" id="header-search" aria-label="Строка поиска">
+          </li>
+          <li><button type="button" aria-label="Кнопка закладки">Закладки</button></li>
+          <li><button type="button" aria-label="Кнопка корзины">Корзина</button></li>
+          <li><button type="button" aria-label="Кнопка оформить заказ">Оформить заказ</button></li>
+        </ul>
     </div>
     <div>
       <p>
@@ -28,8 +33,8 @@
       <address>
         г.Санкт-Петербург, ул.Б. Конюшенная, д. 19/8
       </address>
-      <a>Войти</a>
-      <a>Регистрация</a>
+        <a href="blank.html">Войти</a>
+        <a href="blank.html">Регистрация</a>
     </div>
     <nav class="main-navigate">
       <ul>
@@ -44,29 +49,29 @@
     </nav>
   </header>
   <main class="index-main">
-    <h1>Сайт компании Техномарт</h1>
+    <h1 class="visually-hidden">Сайт компании Техномарт</h1>
     <section>
-      <h2>Услуги</h2>
+      <h2 class="visually-hidden">Услуги</h2>
       <ul>
         <li>
           <h3>Материалы</h3>
-          <a href="">На любой вкус</a>
+          <a href="blank.html">На любой вкус</a>
         </li>
         <li>
           <h3>Инструмент</h3>
-          <a href="">На все случаи</a>
+          <a href="blank.html">На все случаи</a>
         </li>
         <li>
           <h3>Техника</h3>
-          <a href="">Для стройки</a>
+          <a href="blank.html">Для стройки</a>
         </li>
         <li>
           <h3>Скидки 50%</h3>
-          <a href="">на 350 товаров</a>
+          <a href="blank.html">на 350 товаров</a>
         </li>
         <li>
           <h3>Доставка</h3>
-          <a href="">Бесплатно</a>
+          <a href="blank.html">Бесплатно</a>
         </li>
       </ul>
       <ul>
@@ -74,20 +79,20 @@
           <img src="img/Perfotrators.jpg" alt="Изображение перфоратора" width="620" height="266">
           <h3>Перфораторы</h3>
           <span>Настоящие мужские игрушки</span>
-          <a>Открыть каталог</a>
+          <a href="catalog.html">Открыть каталог</a>
         </li>
         <li>
           <img src="img/Drills.jpg" alt="Изображение дрели" width="620" height="266">
           <h3>Дрели</h3>
           <span>Настоящие мужские игрушки</span>
-          <a>Открыть каталог</a>
+          <a href="catalog.html">Открыть каталог</a>
         </li>
       </ul>
     </section>
     <section>
       <div>
         <h2>Популярные товары:</h2>
-        <a>Все популярные товары</a>
+        <a href="blank.html">Все популярные товары</a>
       </div>
       <ul>
         <li>
@@ -126,7 +131,7 @@
     <section>
       <div>
         <h2>Популярные производители:</h2>
-        <a>Все производители</a>
+        <a href="blank.html">Все производители</a>
       </div>
       <ul>
         <li><a href=""><img src="img/Bosch_logo.jpg" alt="Логотип BOSCH" width="220" height="145"></a></li>
@@ -135,10 +140,8 @@
         <li><a href=""><img src="img/Interscol_logo.jpg" alt="Логотип ИНТЕРСКОЛ" width="220" height="145"></a></li>
         <li><a href=""><img src="img/Hitachi_logo.png" alt="Логотип HITACHI" width="220" height="145"></a></li>
         <li><a href=""><img src="img/LG_logo.jpg" alt="Логотип LG" width="220" height="145"></a></li>
-        <li><a href=""><img src="img/AEGPE_logo.jpg" alt="Логотип AEG POWER SOLUTIONS" width="220" height="145"></a>
-        </li>
-        <li><a href=""><img src="img/Metabo_logo.jpg" alt="Логотип METABO work.Don't play." width="220"
-              height="145"></a></li>
+        <li><a href=""><img src="img/AEGPE_logo.jpg" alt="Логотип AEG POWER SOLUTIONS" width="220" height="145"></a></li>
+        <li><a href=""><img src="img/Metabo_logo.jpg" alt="Логотип METABO work.Don't play." width="220" height="145"></a></li>
       </ul>
     </section>
     <section>
@@ -179,16 +182,29 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a>Подробнее о компании</a>
+        <a href="blank.html">Подробнее о компании</a>
       </section>
       <section>
         <h2>Контакты</h2>
         <p>
           Вы можете забрать товар сами,
-          заехав в наш оффис:
-          <a><img src="img/map.png" alt="Адрес на карте" width="300" height="158"></a>
+          заехав в наш офис:
+          <a href=""><img src="img/map.png" alt="Адрес на карте" width="300" height="158"></a>
+          <a href="">
+            <img src="img/map popup.png" alt="Адрес на карте" width="943" height="449">
+            <button type="button" aria-label="Закрыть карту">Крестик</button>
+          </a>
         </p>
-        <a>Заблудились? Напишите нам!</a>
+        <button type="button">Заблудились? Напишите нам!</button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label for="name">Ваше имя:</label>
+          <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" name="email" id="email" placeholder="email@example.com" required>
+          <label for="letter">Текст письма</label>
+          <textarea rows="10" placeholder="В свободной форме" ></textarea>
+          <button type="submit">Оформить заказ</button>
+        </form>
       </section>
     </div>
   </main>
