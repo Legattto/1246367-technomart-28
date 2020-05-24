@@ -16,7 +16,7 @@
       <ul>
         <li>
           <label for="header-search">Поиск</label;>
-          <input type="search" name="search" id="header-search">
+            <input type="search" name="search" id="header-search">
         </li>
         <li><button type="button" aria-label="Кнопка закладки">Закладки</button></li>
         <li><button type="button" aria-label="Кнопка корзины">Корзина</button></li>
@@ -194,21 +194,8 @@
           Вы можете забрать товар сами,
           заехав в наш офис:
           <a href=""><img src="img/map.png" alt="Адрес на карте" width="300" height="158"></a>
-          <a href="">
-            <img src="img/map popup.png" alt="Адрес на карте" width="943" height="449">
-            <button type="button" aria-label="Закрыть карту">Крестик</button>
-          </a>
         </p>
         <button type="button">Заблудились? Напишите нам!</button>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label for="name">Ваше имя:</label>
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
-          <label for="email">Ваш e-mail:</label>
-          <input type="email" name="email" id="email" placeholder="email@example.com" required>
-          <label for="letter">Текст письма</label>
-          <textarea rows="10" placeholder="В свободной форме" name="letter" id="letter"></textarea>
-          <button type="submit">Оформить заказ</button>
-        </form>
       </section>
     </div>
   </main>
@@ -255,6 +242,19 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacedemy.ru</a>
     </p>
   </footer>
+  <a href="" class="visually-hidden">
+    <img src="img/map popup.png" alt="Адрес на карте" width="943" height="449">
+    <button type="button" aria-label="Закрыть карту">Крестик</button>
+  </a>
+  <form action="https://echo.htmlacademy.ru" method="post" class="visually-hidden">
+    <label for="name">Ваше имя:</label>
+    <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
+    <label for="email">Ваш e-mail:</label>
+    <input type="email" name="email" id="email" placeholder="email@example.com" required>
+    <label for="letter">Текст письма</label>
+    <textarea rows="10" placeholder="В свободной форме" name="letter" id="letter"></textarea>
+    <button type="submit">Оформить заказ</button>
+  </form>
 </body>
 
 </html>
