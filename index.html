@@ -10,16 +10,18 @@
 <body>
   <header class="main-header">
     <div class="up-container">
-      <a href="#"><img src="img/Header_logo_texnomart.png" alt="Логотип компании Техномарт" width="220" height="47"></a>
-        <ul>
-          <li>
-            <label for="header-search">Поиск</label;>
-              <input type="search" name="search" id="header-search" aria-label="Строка поиска">
-          </li>
-          <li><button type="button" aria-label="Кнопка закладки">Закладки</button></li>
-          <li><button type="button" aria-label="Кнопка корзины">Корзина</button></li>
-          <li><button type="button" aria-label="Кнопка оформить заказ">Оформить заказ</button></li>
-        </ul>
+      <a>
+        <img src="img/Header_logo_texnomart.png" alt="Логотип компании Техномарт" width="220" height="47">
+      </a>
+      <ul>
+        <li>
+          <label for="header-search">Поиск</label;>
+          <input type="search" name="search" id="header-search">
+        </li>
+        <li><button type="button" aria-label="Кнопка закладки">Закладки</button></li>
+        <li><button type="button" aria-label="Кнопка корзины">Корзина</button></li>
+        <li><button type="button" aria-label="Кнопка оформить заказ">Оформить заказ</button></li>
+      </ul>
     </div>
     <div>
       <p>
@@ -33,8 +35,8 @@
       <address>
         г.Санкт-Петербург, ул.Б. Конюшенная, д. 19/8
       </address>
-        <a href="blank.html">Войти</a>
-        <a href="blank.html">Регистрация</a>
+      <a href="blank.html">Войти</a>
+      <a href="blank.html">Регистрация</a>
     </div>
     <nav class="main-navigate">
       <ul>
@@ -140,8 +142,10 @@
         <li><a href=""><img src="img/Interscol_logo.jpg" alt="Логотип ИНТЕРСКОЛ" width="220" height="145"></a></li>
         <li><a href=""><img src="img/Hitachi_logo.png" alt="Логотип HITACHI" width="220" height="145"></a></li>
         <li><a href=""><img src="img/LG_logo.jpg" alt="Логотип LG" width="220" height="145"></a></li>
-        <li><a href=""><img src="img/AEGPE_logo.jpg" alt="Логотип AEG POWER SOLUTIONS" width="220" height="145"></a></li>
-        <li><a href=""><img src="img/Metabo_logo.jpg" alt="Логотип METABO work.Don't play." width="220" height="145"></a></li>
+        <li><a href=""><img src="img/AEGPE_logo.jpg" alt="Логотип AEG POWER SOLUTIONS" width="220" height="145"></a>
+        </li>
+        <li><a href=""><img src="img/Metabo_logo.jpg" alt="Логотип METABO work.Don't play." width="220"
+              height="145"></a></li>
       </ul>
     </section>
     <section>
@@ -202,7 +206,7 @@
           <label for="email">Ваш e-mail:</label>
           <input type="email" name="email" id="email" placeholder="email@example.com" required>
           <label for="letter">Текст письма</label>
-          <textarea rows="10" placeholder="В свободной форме" ></textarea>
+          <textarea rows="10" placeholder="В свободной форме" name="letter" id="letter"></textarea>
           <button type="submit">Оформить заказ</button>
         </form>
       </section>
@@ -210,7 +214,9 @@
   </main>
   <footer class="main-footer">
     <div>
-      <a href="#"><img src="img/footer_logo_tehnomart.png" alt="Логотип компании Техномарт" width="220" height="68"></a>
+      <a href="#" aria-label="Переход на главную страницу">
+        <img src="img/footer_logo_tehnomart.png" alt="Логотип компании Техномарт" width="220" height="68">
+      </a>
       <address>
         г.Санкт-Петербург, ул.Б. Конюшенная, д. 19/8
       </address>
