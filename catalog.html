@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
   <title>Каталог</title>
 </head>
 
@@ -15,7 +16,8 @@
       </a>
       <ul>
         <li>
-          <label aria-label="Строка поиска">
+          <label>
+            <span class="visually-hidden">Поиск</span>
             <input type="search" name="search" placeholder="Поиск:">
           </label>
         </li>
@@ -127,31 +129,36 @@
             <ul>
               <li>
                 <label>
-                  <input type="checkbox" name="Manufacturer" value="bosch" aria-label="Производитель bosch" checked>
+                  <span class="visually-hidden">Производитель bosch</span>
+                  <input type="checkbox" name="Manufacturer" value="bosch" checked>
                   BOSCH
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="Manufacturer" value="interskol" aria-label="Производитель Интерскол">
+                  <span class="visually-hidden">Производитель Интрескол</span>
+                  <input type="checkbox" name="Manufacturer" value="interskol">
                   ИНТЕРСКОЛ
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="Manufacturer" value="makita" aria-label="Производитель makita" checked>
+                  <span class="visually-hidden">Производитель makita</span>
+                  <input type="checkbox" name="Manufacturer" value="makita" checked>
                   MAKITA
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="Manufacturer" value="dewalt" aria-label="Производитель dewalt">
+                  <span class="visually-hidden">Производитель dewalt</span>
+                  <input type="checkbox" name="Manufacturer" value="dewalt">
                   DEWALT
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="Manufacturer" value="hitachi" aria-label="Производитель hitachi">
+                  <span class="visually-hidden">Производитель hitachi</span>
+                  <input type="checkbox" name="Manufacturer" value="hitachi">
                   HITACHI
                 </label>
               </li>
@@ -162,13 +169,15 @@
             <ul>
               <li>
                 <label>
-                  <input type="radio" name="battrytipe" value="battry" aria-label="Тип питания Аккумуляторные" checked>
+                  <span class="visually-hidden">Тип питания Аккумуляторные</span>
+                  <input type="radio" name="battrytipe" value="battry" checked>
                   Аккумуляторные
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="radio" name="battrytipe" value="network" aria-label="Тип питания Сетевые">
+                  <span class="visually-hidden">Тип питания Сетевые</span>
+                  <input type="radio" name="battrytipe" value="network">
                   Сетевые
                 </label>
               </li>
@@ -292,16 +301,16 @@
         </ul>
         <ul>
           <li>
-            <a href="blank.html">1</a>
+            <a href="blank.html" aria-label="Первая страница">1</a>
           </li>
           <li>
-            <a href="blank.html">2</a>
+            <a href="blank.html" aria-label="Вторая страница">2</a>
           </li>
           <li>
-            <a href="blank.html">3</a>
+            <a href="blank.html" aria-label="Третья страница">3</a>
           </li>
           <li>
-            <a href="blank.html">Следующая</a>
+            <a href="blank.html" aria-label="Следующая страница">Следующая</a>
           </li>
         </ul>
       </section>
