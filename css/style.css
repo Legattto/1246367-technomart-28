@@ -15,8 +15,8 @@ html {
   font-weight: 400;
   font-family: "Cuprum";
   font-display: swap;
-  src: url("fonts/cuprum.woff2") format("woff2"),
-    url("fonts/cuprum.woff") format("woff");
+  src: url("../fonts/cuprum.woff2") format("woff2"),
+    url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face {
@@ -24,8 +24,8 @@ html {
   font-weight: 700;
   font-family: "Cuprum";
   font-display: swap;
-  src: url("fonts/cuprumbold.woff2") format("woff2"),
-    url("fonts/cuprumbold.woff") format("woff");
+  src: url("../fonts/cuprumbold.woff2") format("woff2"),
+    url("../fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face {
@@ -33,8 +33,8 @@ html {
   font-weight: 400;
   font-family: "Cuprum";
   font-display: swap;
-  src: url("fonts/cuprumitalic.woff2") format("woff2"),
-    url("fonts/cuprumitalic.woff") format("woff");
+  src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+    url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 @font-face {
@@ -42,8 +42,8 @@ html {
   font-weight: 700;
   font-family: "Cuprum";
   font-display: swap;
-  src: url("fonts/cuprumbolditalic.woff2") format("woff2"),
-    url("fonts/cuprumbolditalic.woff") format("woff");
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+    url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -51,8 +51,8 @@ html {
   font-weight: 400;
   font-family: "PT Sans";
   font-display: swap;
-  src: url("fonts/ptsans.woff2") format("woff2"),
-    url("fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
@@ -60,8 +60,8 @@ html {
   font-weight: 700;
   font-family: "PT Sans";
   font-display: swap;
-  src: url("fonts/ptsansbold.woff2") format("woff2"),
-    url("fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
 }
 
 /* Убирает заголовки */
@@ -77,6 +77,20 @@ html {
 /* Убирает ненужные блоки */
 .hidden {
   display: none;
+}
+
+/* Флажок новый */
+.new::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/new_flag.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
 }
 
 /* Убриает стандартное форматирование списков */
@@ -116,7 +130,7 @@ body address {
   --linethough: #A9A9A9;
   --some-color: #F9F5F0;
   --box-shadow: rgba(0, 0, 0, 0.25);
-  --opasity-back: rgba(255, 255, 255, 0.3);
+  --opasity-back: rgba(255, 255, 255, 0.5);
   --box-shadow-hover: rgba(138, 31, 39, 0.8);
   --hover-effect-gl: rgba(197, 197, 197, 0.3);
   --active-effect-gl: rgba(167, 167, 167, 0.3);
@@ -210,14 +224,10 @@ a {
   justify-content: center;
   align-items: center;
   background-color: var(--basic-red);
-  box-shadow: inset 0 -5px var(--box-shadow);
+  box-shadow: 0 5px var(--box-shadow-hover);
 }
 
 /* Эффекты при наведени */
-.header-logo:hover,
-.header-logo:focus {
-  box-shadow: 0 5px var(--box-shadow-hover);
-}
 
 .header-logo:active {
   background-color: var(--error);
@@ -375,7 +385,8 @@ a {
 }
 
 .button-checkout:active {
-  opacity: 0.3;
+  color: var(--opasity-back);
+  background-color: var(--basic-green);
 }
 
 /* Основное содержание хедера */
@@ -431,14 +442,8 @@ a {
 }
 
 /* Эффекты при наведении */
-.phone-number:hover,
 .phone-number:focus {
-  box-shadow: 0px 4px 4px var(--box-shadow);
-}
-
-.phone-number:active {
-  box-shadow: 0px 4px 4px var(--box-shadow);
-  opacity: 0.3;
+  outline: auto;
 }
 
 /* Адрес */
@@ -579,30 +584,37 @@ a {
     "slider slider discounts"
     "slider slider deliviry";
   gap: 20px;
+
 }
 
 /* Элементы грид сетки */
 .material {
+  position: relative;
   grid-area: material;
 }
 
 .instrument {
+  position: relative;
   grid-area: instrument;
 }
 
 .tech {
+  position: relative;
   grid-area: tech;
 }
 
 .discounts {
+  position: relative;
   grid-area: discounts;
 }
 
 .main-slider {
+  position: relative;
   grid-area: slider;
 }
 
 .deliviry {
+  position: relative;
   grid-area: deliviry;
 }
 
@@ -763,19 +775,6 @@ a {
   padding: 0;
 }
 
-/* Эффекты кнопок */
-.right-button-slide:hover,
-.right-button-slide:focus,
-.left-button-slide:hover,
-.left-button-slide:focus {
-  box-shadow: 0px 4px 4px var(--box-shadow);
-}
-
-.left-button-slide:active,
-.right-button-slide:active {
-  opacity: 0.3;
-}
-
 /* Эффекты на слайдере */
 
 .first-slide a:hover,
@@ -783,13 +782,11 @@ a {
 .first-slide a:focus,
 .second-slide a:focus {
   background-color: var(--basic-red);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 .first-slide a:active,
 .second-slide a:active {
   background-color: var(--error);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 /* Секция популярные товары */
@@ -828,12 +825,10 @@ a {
 .sec-title a:hover,
 .sec-title a:focus {
   background-color: var(--basic-red);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 .sec-title a:active {
   background-color: var(--error);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 /* Списко флекс*/
@@ -855,6 +850,7 @@ a {
   margin-right: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  position: relative;
 }
 
 /* Убриаем отступ справа у каждого 4 элемента */
@@ -1065,11 +1061,11 @@ a {
 /* эффекты переключателся слайд контента */
 
 .servese-slider li a:hover,
-.servese-slider li a:active {
+.servese-slider li a:focus {
   background-color: var(--hover-color);
 }
 
-.servese-slider li a:focus {
+.servese-slider-active{
   background-color: var(--white);
   color: var(--title-color);
 }
@@ -1125,12 +1121,10 @@ a {
 .credit-slider a:hover,
 .credit-slider a:focus {
   background-color: var(--basic-red);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 .credit-slider a:active {
   background-color: var(--error);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 /* Секция с контактной информацией */
@@ -1215,12 +1209,10 @@ a {
 .text-section a:hover,
 .text-section a:focus {
   background-color: var(--basic-red);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 .text-section a:active {
   background-color: var(--error);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 /* Секция с контакнтной инофрмацией */
@@ -1271,12 +1263,10 @@ a {
 .contact-section a:hover,
 .contact-section a:focus {
   background-color: var(--basic-red);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 .contact-section a:active {
   background-color: var(--error);
-  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 
 /*                          Футер                             */
@@ -1298,10 +1288,7 @@ a {
 }
 
 /* Эффекты при наведени */
-.footer-logo:hover,
-.footer-logo:focus {
-  box-shadow: 0 5px var(--box-shadow-hover);
-}
+
 
 .footer-logo:active {
   background-color: var(--error);
@@ -1321,20 +1308,17 @@ a {
 }
 
 /* телефон */
-.contacts-flex a {
+.footer-phone {
   display: flex;
   color: var(--white);
+  width: 140px;
 }
 
-.contacts-flex a:hover,
 .contacts-flex a:focus {
-  text-decoration: underline;
+  outline: auto;
 }
 
-.contacts-flex a:active {
-  text-decoration: none;
-  opacity: 0.5;
-}
+
 
 /* Навигация списки */
 .ul-flex {
@@ -1573,11 +1557,18 @@ a {
 
 /* Эффекты при наведении */
 
-.logout:focus,
-.logout svg:focus {
+.user:hover svg,
+.user:focus svg,
+.logout:hover svg,
+.logout:focus svg {
   fill: var(--basic-gray);
 }
-
+.user:active svg,
+.logout:active svg,
+.useracc:active {
+  fill: var(--basic-graylight);
+  color: var(--basic-graylight);
+}
 
 /* Нижния часть юзер меню */
 
@@ -1695,10 +1686,9 @@ a {
 
 /* Эффекты при наведении */
 
-.cat-title:hover,
+
 .cat-title:focus {
-  box-shadow: 0px 4px 4px var(--box-shadow);
-  background-color: transparent;
+ outline: auto;
 }
 
 /* Оформелине секции католога */
@@ -1858,16 +1848,9 @@ a {
   border-radius: 2px;
 }
 
-.button-filter-submit:hover {
-  box-shadow: 0px 4px 4px var(--box-shadow);
-}
-
-.button-filter-submit:active {
-  border-color: var(--basic-red);
-}
 
 .button-filter-submit:focus {
-  background-color: var(--basic-red);
+  outline: auto;
 }
 
 /* Карточки товаров */
@@ -1942,16 +1925,16 @@ a {
   text-transform: uppercase;
 }
 
-.catalog-list-flex-filter-a a:hover {
+.catalog-list-flex-filter-a a:hover,
+.catalog-list-flex-filter-a a:focus {
   border-bottom: 1px solid var(--basic-red);
   color: var(--black);
 }
-
-.catalog-list-flex-filter-a a:active,
-.catalog-list-flex-filter-a a:focus {
-  border: none;
-  color: var(--basic-red);
+.catalog-list-flex-filter-b a:hover svg,
+.catalog-list-flex-filter-b a:focus svg {
+  fill: var(--black);
 }
+
 
 /* Сам католог карточек */
 .list-catatlog-flex-box {
@@ -2033,17 +2016,15 @@ a {
   line-height: 18px;
 }
 
-.catalog-page-list a:hover {
-  box-shadow: 0px 4px 4px var(--box-shadow);
+.catalog-page-list a:hover,
+.catalog-page-list a:focus {
+  border: 1px solid var(--basic-graylight);
 }
 
 .catalog-page-list a:active {
   border: 1px solid var(--basic-red);
 }
 
-.catalog-page-list a:focus {
-  background-color: var(--basic-red);
-}
 
 /* Текстовая секция в котологе */
 .catalog-text-section {
