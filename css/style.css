@@ -232,7 +232,9 @@ a {
 .header-logo:active {
   background-color: var(--error);
 }
-
+.header-logo--nopointer {
+  pointer-events: none;
+}
 /* Настраеваем цвет ссылок*/
 .header-up-menu-flex a {
   color: var(--white);
