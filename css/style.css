@@ -1957,6 +1957,7 @@ a {
   margin-right: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  position: relative;
 }
 
 /* Убриаем отступ справа у каждого 3 элемента */
