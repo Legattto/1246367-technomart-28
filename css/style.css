@@ -176,9 +176,9 @@ a {
 }
 
 .container {
-  width: 1200px;
-  padding-left: 130px;
-  padding-right: 130px;
+  width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0 auto;
 
 }
