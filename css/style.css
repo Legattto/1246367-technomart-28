@@ -76,19 +76,6 @@ html {
 
 
 /* Флажок новый */
-.new-small::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 59px;
-  background-image: url("../img/new_flag.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 1;
-}
-
 .new::before {
   content: "";
   position: absolute;
@@ -209,6 +196,7 @@ a {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  font-weight: normal;
 }
 
 .title--color {
@@ -351,7 +339,7 @@ a {
 }
 
 .cart {
-  padding-left: 35px;
+  padding-left: 32px;
   padding-right: 10px;
   flex-grow: 1;
 }
@@ -384,9 +372,18 @@ a {
   opacity: 0.3;
   position: absolute;
   top: 13px;
+  left: 9px;
+}
+.cart--color::before {
+  content: "";
+  background-image: url("../img/svg-logo/icon-cart.svg");
+  width: 15px;
+  height: 15px;
+  opacity: 0.3;
+  position: absolute;
+  top: 13px;
   left: 12px;
 }
-
 /* Эффекты корзины и закладки */
 .cart:hover,
 .cart:hover::before,
@@ -884,12 +881,15 @@ a {
   background-color: var(--some-color);
   align-items: center;
   padding-left: 28px;
-  padding-right: 19px;
+  padding-right: 14px;
+  padding-bottom: 3px;
   margin-bottom: 18px;
 }
 
 .sec-title--manifacture {
   margin-bottom: 0;
+  padding-bottom: 0;
+  padding-right: 19px;
 }
 
 .sec-title a {
@@ -976,7 +976,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
+  padding-right: 7px;
   margin-bottom: 5px;
 }
 
@@ -1063,26 +1063,29 @@ a {
 .buy-cart-bookmark:active {
   opacity: 0.5;
 }
+
 /* Ховер при наведении на карточку товара */
 .list-catatlog-flex-box li:hover,
 .list-flex li:hover {
- box-shadow: 0px 4px 20px var(--box-shadow);
+  box-shadow: 0px 4px 20px var(--box-shadow);
 }
 
 /* Перечеркивание цены */
 .prise-linethrough {
   text-decoration-line: line-through;
   color: var(--linethough);
+  margin-top: 6px;
+}
+.prise-linethrough--index {
   margin-top: 8px;
 }
-
 /* Цена в красном блоке */
 .prise-holder {
   margin-top: auto;
   background-image: url("../img/red-button.png");
   background-repeat: no-repeat;
   background-position: 45px;
-  padding: 10px 30px 10px 32px;
+  padding: 10px 32px 10px 32px;
   min-width: 141px;
 }
 
@@ -1182,7 +1185,8 @@ a {
 .servese-slider-content h3 {
   margin: 0;
   padding: 0;
-  padding-bottom: 27px;
+  padding-bottom: 30px;
+  margin-top: -3px;
 }
 
 /* Настройка сладера */
@@ -1222,8 +1226,9 @@ a {
   padding-left: 22px;
   width: 100%;
   height: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 17px;
+  margin-top: -7px;
+  padding-bottom: 17px;
 }
 
 /* Сервис слайд контент */
@@ -1231,6 +1236,7 @@ a {
   padding-left: 80px;
   width: 700px;
   position: relative;
+  z-index: 1;
 }
 
 /* эффекты переключателся слайд контента */
@@ -1277,6 +1283,7 @@ a {
   position: absolute;
   top: 18px;
   right: 0;
+  z-index: -1;
 }
 
 .garanty-slider::before {
@@ -1288,6 +1295,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -1;
 }
 
 .credit-slider::before {
@@ -1299,6 +1307,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -1;
 }
 
 /* Сылка в последнем слайде */
@@ -1355,7 +1364,6 @@ a {
   color: var(--black);
   margin: 0;
   padding: 0;
-  align-self: flex-start;
 }
 
 .text-section .text-pad {
@@ -1375,12 +1383,13 @@ a {
   position: relative;
   margin: 0;
   padding: 0;
-  padding-left: 37px;
+
 }
 
 .text-section li {
+  padding-left: 37px;
   color: var(--black);
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .text-section li::before {
@@ -1396,8 +1405,7 @@ a {
 /* Ссылка */
 .text-section a {
   display: flex;
-  width: 192px;
-  max-width: 200px;
+  width: 220px;
   height: 38px;
   background-color: var(--basic-red);
   color: var(--white);
@@ -1407,6 +1415,7 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   padding: 10px;
+  margin-top: 7px;
 }
 
 /* Эффекты ссылки */
@@ -1426,6 +1435,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-self: flex-start;
 }
 
 .contact-section span {
@@ -1446,8 +1456,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 245px;
-  max-width: 280px;
+  width: 300px;
   min-height: 38px;
   background-color: var(--basic-red);
   color: var(--white);
@@ -1478,8 +1487,8 @@ a {
   min-height: 68px;
   width: 220px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-left: 41px;
+  padding-top: 19px;
   background-color: var(--basic-red);
   box-shadow: inset 0 -5px var(--box-shadow);
   margin-bottom: 22px;
@@ -1504,9 +1513,12 @@ a {
   flex-direction: column;
   width: 393px;
 }
-
+.contacts-flex address {
+  padding-left: 3px;
+}
 /* телефон */
 .footer-phone {
+  padding-left: 3px;
   display: flex;
   color: var(--white);
   width: 140px;
@@ -1527,6 +1539,7 @@ a {
 
 .footer-list-a {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -1534,9 +1547,11 @@ a {
 }
 
 .footer-list-a li {
-  margin-right: 60px;
+  margin-right: 59px;
 }
-
+.footer-list-a li:last-child {
+  margin-right: -1px;
+}
 /* Эффекты сылкок */
 .footer-list-a a {
   color: var(--white);
@@ -1556,6 +1571,7 @@ a {
 
 .footer-list-b {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -1566,7 +1582,9 @@ a {
 .footer-list-b li {
   margin-right: 60px;
 }
-
+.footer-list-b li:last-child {
+  margin-right: -1px;
+}
 .footer-list-b a {
   color: var(--special-yellowlight);
 }
@@ -1623,8 +1641,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  min-height: 44px;
+  width: 41px;
+  min-height: 41px;
   border-radius: 50%;
   background-color: #212A3A;
 }
@@ -1669,11 +1687,13 @@ a {
 .mail {
   width: 180px;
   padding-left: 60px;
+  padding-bottom: 3px;
 }
 
 .developer {
   width: 180px;
   padding-left: 69px;
+  padding-bottom: 3px;
 }
 
 .mail a,
@@ -1701,6 +1721,7 @@ a {
 
 .cart--color {
   background-color: var(--basic-red);
+  padding-left: 35px;
 }
 
 .phone-number--catalog,
@@ -2115,11 +2136,13 @@ input::-webkit-inner-spin-button {
   position: relative;
   margin-bottom: 20px;
 }
-.radio-box li{
+
+.radio-box li {
   position: relative;
   margin-top: 8px;
   margin-bottom: 22px;
 }
+
 .checkbox-box {
   border-bottom: 1px solid var(--some-color);
   padding-bottom: 8px;
@@ -2141,6 +2164,7 @@ input::-webkit-inner-spin-button {
 .radio-box {
   padding-bottom: 16px;
 }
+
 .radio-box label::before {
   content: "";
   position: absolute;
@@ -2153,19 +2177,21 @@ input::-webkit-inner-spin-button {
   opacity: 0.7;
   border-radius: 50%;
 }
+
 .radio-box label::after {
-     content: "";
-     position: absolute;
-     left: 8px;
-     top: 6px;
-     width: 9px;
-     height: 9px;
-     background-color: var(--raido-box);
-     opacity: 0.7;
-     border-radius: 50%;
-     display: none;
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--raido-box);
+  opacity: 0.7;
+  border-radius: 50%;
+  display: none;
 
 }
+
 .radio-box label:hover::before {
   opacity: 1;
 }
@@ -2177,9 +2203,11 @@ input::-webkit-inner-spin-button {
 .radio-box input:disabled+label {
   pointer-events: none;
 }
+
 .radio-box input:checked+label::after {
- display: block;
+  display: block;
 }
+
 /* Кнопка отправить */
 .button-filter-submit {
   width: 220px;
@@ -2188,6 +2216,12 @@ input::-webkit-inner-spin-button {
   outline: none;
   background-color: var(--white);
   border-radius: 2px;
+  text-transform: uppercase;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 
@@ -2239,16 +2273,20 @@ input::-webkit-inner-spin-button {
 .catalog-list-flex-filter-a {
   width: 370px;
 }
+
 .catalog-list-flex-filter-a li {
-  margin-right: 70px;
+  margin-right: 71px;
 }
+
 .catalog-list-flex-filter-a li:last-child {
   margin: 0;
 }
+
 .catalog-list-flex-filter-a .active-filter {
   color: var(--basic-red);
   border: none;
 }
+
 .catalog-list-flex-filter .catalog-list-flex-filter-b {
   min-height: 38px;
   width: 76px;
@@ -2287,6 +2325,7 @@ input::-webkit-inner-spin-button {
 .catalog-list-flex-filter-b a:focus svg {
   fill: var(--black);
 }
+
 .catalog-list-flex-filter-b .active-hl {
   fill: var(--basic-red);
 }
@@ -2329,8 +2368,7 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
   color: var(--black);
   text-align: center;
-  padding-bottom: 6px;
-  padding-left: 18px;
+  padding-left: 28px;
   width: 185px;
   min-height: 43px;
 }
@@ -2357,15 +2395,18 @@ input::-webkit-inner-spin-button {
   width: 284px;
   align-items: center;
 }
+
 .catalog-page-list li {
-  margin-right: 10px;
+  margin-right: 8px;
 }
+
 .catalog-page-list li:last-child {
   margin: 0;
 }
+
 .catalog-page-list a {
   display: flex;
-  padding: 10px 15px;
+  padding: 9px 15px;
   border: 1px solid var(--some-color);
   border-radius: 2px;
   color: var(--black);
@@ -2376,9 +2417,11 @@ input::-webkit-inner-spin-button {
   line-height: 18px;
   text-transform: uppercase;
 }
+
 .catalog-page-list li:last-child a {
-  padding: 10px 30px;
+  padding: 9px 32px 9px 33px;
 }
+
 .catalog-page-list a:hover,
 .catalog-page-list a:focus {
   border: 1px solid var(--basic-graylight);
@@ -2387,10 +2430,12 @@ input::-webkit-inner-spin-button {
 .catalog-page-list a:active {
   border: 1px solid var(--basic-red);
 }
+
 .catalog-page-list .active-page {
   background-color: var(--basic-red);
   border-radius: 2px;
   border: 1px solid var(--basic-red);
+  color: var(--white);
 }
 
 /* Текстовая секция в котологе */
@@ -2416,5 +2461,5 @@ input::-webkit-inner-spin-button {
 }
 
 .catalog-text-paragraph {
-  padding-bottom: 67px;
+  padding-bottom: 70px;
 }
