@@ -165,7 +165,7 @@
             <span class="prise-linethrough prise-linethrough--index">32500 Р.</span>
             <span class="prise-holder">25500 Р.</span>
             <div class="buy-cart">
-              <a href="#" class="buy-cart-buy">Купить</a>
+              <a href="#" class="js-cart buy-cart-buy">Купить</a>
               <a href="#" class="buy-cart-bookmark">В закладки</a>
             </div>
           </li>
@@ -177,7 +177,7 @@
             <span class="prise-linethrough prise-linethrough--index">22500 Р.</span>
             <span class="prise-holder">15500 Р.</span>
             <div class="buy-cart">
-              <a href="#" class="buy-cart-buy">Купить</a>
+              <a href="#" class="js-cart buy-cart-buy">Купить</a>
               <a href="#" class="buy-cart-bookmark">В закладки</a>
             </div>
           </li>
@@ -189,7 +189,7 @@
             <span class="prise-linethrough prise-linethrough--index">30500 Р.</span>
             <span class="prise-holder">25500 Р.</span>
             <div class="buy-cart">
-              <a href="#" class="buy-cart-buy">Купить</a>
+              <a href="#" class="js-cart buy-cart-buy">Купить</a>
               <a href="#" class="buy-cart-bookmark">В закладки</a>
             </div>
           </li>
@@ -200,7 +200,7 @@
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <span class="prise-holder">12500 Р.</span>
             <div class="buy-cart">
-              <a href="#" class="buy-cart-buy">Купить</a>
+              <a href="#" class="js-cart buy-cart-buy">Купить</a>
               <a href="#" class="buy-cart-bookmark">В закладки</a>
             </div>
           </li>
@@ -265,16 +265,16 @@
         <div class="servese-slider">
           <ul>
             <li>
-              <a href="#" class="servese-slider-active">Доставка</a>
+              <a href="#" class="js-servese-tabs ">Доставка</a>
             </li>
             <li>
-              <a href="#">Гарантия</a>
+              <a href="#" class="js-servese-tabs ">Гарантия</a>
             </li>
             <li>
-              <a href="#">Кредит</a>
+              <a href="#" class="js-servese-tabs servese-slider-active">Кредит</a>
             </li>
           </ul>
-          <div class="servese-slider-content hidden servese-slider-content-current">
+          <div class="js-servese-tabs-content servese-slider-content">
             <div class="delivery-slider">
               <h3 class="title title--color">Доставка</h3>
               <p>
@@ -285,7 +285,7 @@
               </p>
             </div>
           </div>
-          <div class="servese-slider-content hidden">
+          <div class="js-servese-tabs-content servese-slider-content hidden">
             <div class="garanty-slider">
               <h3 class="title title--color">Гарантия</h3>
               <p>
@@ -297,7 +297,7 @@
               </p>
             </div>
           </div>
-          <div class="servese-slider-content hidden">
+          <div class="js-servese-tabs-content servese-slider-content hidden">
             <div class="credit-slider">
               <h3 class="title title--color">Кредит</h3>
               <p>
@@ -338,10 +338,10 @@
             заехав в наш офис:
           </span>
           <a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323117%2C59.938635&z=17.09"
-            class="map" aria-label="г.Санкт-Петербург, ул.Б. Конюшенная, д. 19/8">
+            class="js-map map" aria-label="г.Санкт-Петербург, ул.Б. Конюшенная, д. 19/8">
             <img src="img/map.png" alt="Адрес на карте" width="300" height="158">
           </a>
-          <a href="#" class="form-link">Заблудились? Напишите нам!</a>
+          <a href="#" class="js-form form-link">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </div>
@@ -424,7 +424,7 @@
               <a href="mailto:mail@htmlacademy.ru" aria-label="Наш Email">mail@htmlacademy.ru</a>
             </span>
             <span class="developer">
-              Разработано -
+              Разработано &ndash;
               <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт разработчика">htmlacademy.ru</a>
             </span>
           </div>
@@ -433,7 +433,7 @@
     </div>
   </footer>
 
-  <div class="popup-map hidden">
+  <div class="js-map-modale popup-map hidden">
     <div class="iframe">
       <iframe title="Адрес компании на карте"
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cfc566d236d00d9fb38593831b7e65cd8dfeaa9be7239e379272db6b9f8bec5&amp;source=constructor"
@@ -443,32 +443,28 @@
     </div>
   </div>
 
-  <div class="form-popaup-wrapper hidden">
-    <div class="form-popup">
-      <button type="button" class="button-close button-close--form" aria-label=" Закрыть окно"></button>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-flex-box">
-          <div class="form-flex-box-text">
-            <label class="name">Ваше имя:
-              <input type="text" name="name" placeholder="Имя Фамилия" required>
-            </label>
-            <label>Ваш e-mail:
-              <input type="email" name="email" placeholder="email@example.com" required>
-            </label>
-          </div>
-          <div class="textarea-container">
-            <label for="textarea" class="textarea">Текст письма:</label>
-            <textarea name="letter" placeholder="В свободной форме" id="textarea" required></textarea>
-          </div>
-          <div class="button-container">
-            <button type="submit" class="button-submit">Отправить</button>
-          </div>
-        </div>
-      </form>
-    </div>
+  <div class="js-form-modale form-popup hidden">
+    <button type="button" class="button-close button-close--form" aria-label=" Закрыть окно"></button>
+    <form class="form-flex-box" action="https://echo.htmlacademy.ru" method="post">
+      <div class="form-flex-box-text">
+        <label class="name">Ваше имя:
+          <input type="text" name="name" placeholder="Имя Фамилия" required>
+        </label>
+        <label>Ваш e-mail:
+          <input type="email" name="email" placeholder="email@example.com" required>
+        </label>
+      </div>
+      <div class="textarea-container">
+        <label for="textarea" class="textarea">Текст письма:</label>
+        <textarea name="letter" placeholder="В свободной форме" id="textarea" required></textarea>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="button-submit">Отправить</button>
+      </div>
+    </form>
   </div>
 
-  <div class="cart-popup-wrapper hidden">
+  <div class="js-cart-modale cart-popup-wrapper hidden">
     <button type="button" class="button-close button-close--cart" aria-label="Закрыть окно"></button>
     <span>Товар добавлен в корзину!</span>
     <div class="link-cart-wrapper">
