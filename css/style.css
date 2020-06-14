@@ -1352,10 +1352,12 @@ a {
 .credit-slider a:hover {
   background-color: var(--basic-red);
 }
+
 .credit-slider a:focus {
   background-color: var(--basic-red);
   outline: auto;
 }
+
 .credit-slider a:active {
   background-color: var(--error);
 }
@@ -1447,9 +1449,11 @@ a {
 .text-section a:hover {
   background-color: var(--basic-red);
 }
+
 .text-section a:focus {
   outline: auto;
 }
+
 .text-section a:active {
   background-color: var(--error);
 }
@@ -1495,9 +1499,11 @@ a {
 .contact-section a:hover {
   background-color: var(--basic-red);
 }
+
 .contact-section a:focus {
   outline: auto;
 }
+
 .contact-section a:active {
   background-color: var(--error);
 }
@@ -2475,10 +2481,12 @@ input::-webkit-inner-spin-button {
   color: var(--white);
   pointer-events: none;
 }
+
 .catalog-page-list .active-page:focus {
   border: none;
   outline: none;
 }
+
 /* Текстовая секция в котологе */
 .catalog-text-section {
   background-color: var(--basic-background);
@@ -2754,6 +2762,7 @@ input::-webkit-inner-spin-button {
 .link-cart-order:hover {
   background-color: var(--basic-red);
 }
+
 .link-cart-order:focus {
   outline: auto;
 }
@@ -2774,4 +2783,20 @@ input::-webkit-inner-spin-button {
 /* Убирает ненужные блоки */
 .hidden {
   display: none;
+}
+
+.modal-show {
+  display: block;
+  animation: stretch;
+  animation-duration: 1s;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
