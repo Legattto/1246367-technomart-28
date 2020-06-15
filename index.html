@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/min-style.css" rel="stylesheet">
   <title>Техномарт</title>
 </head>
 
@@ -128,17 +128,19 @@
           <h3>Доставка</h3>
           <a href="#" aria-label="Доставка"><span>Бесплатно</span></a>
         </div>
-        <div class="slider slide-1">
+        <div class="slider">
           <ul class="slider-list">
-            <li class="slider-list-item slide-hidden slide-current">
+            <li class="js-slider slider-list-item">
               <h3>Перфораторы</h3>
               <span>Настоящие мужские игрушки</span>
               <a href="catalog.html">Открыть каталог</a>
+              <img src="img/Perfotrators.jpg" alt="Пример работы перфоратора" width="620" height="266">
             </li>
-            <li class="slider-list-item slide-hidden">
+            <li class="js-slider slider-list-item hidden">
               <h3>Дрели</h3>
               <span>Настоящие мужские игрушки</span>
               <a href="catalog.html">Открыть каталог</a>
+              <img src="img/Drills.jpg" alt="Пример работы дрели" width="620" height="266">
             </li>
           </ul>
           <div>
@@ -157,7 +159,7 @@
           <a href="#">Все популярные товары</a>
         </div>
         <ul class="list-flex">
-          <li>
+          <li class="list-flex-item">
             <div class="card-img-wrapper">
               <img src="img/Bosch9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
             </div>
@@ -169,7 +171,7 @@
               <a href="#" class="buy-cart-bookmark">В закладки</a>
             </div>
           </li>
-          <li class="new">
+          <li class="new list-flex-item">
             <div class="card-img-wrapper">
               <img src="img/Bosch3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
             </div>
@@ -181,7 +183,7 @@
               <a href="#" class="buy-cart-bookmark">В закладки</a>
             </div>
           </li>
-          <li>
+          <li class="list-flex-item">
             <div class="card-img-wrapper">
               <img src="img/Bosch6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
             </div>
@@ -193,7 +195,7 @@
               <a href="#" class="buy-cart-bookmark">В закладки</a>
             </div>
           </li>
-          <li class="new">
+          <li class="new list-flex-item">
             <div class="card-img-wrapper">
               <img src="img/Bosch2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
             </div>
@@ -264,13 +266,13 @@
         </p>
         <div class="servese-slider">
           <ul>
-            <li>
+            <li class="servese-slider-item">
               <a href="#" class="js-servese-tabs servese-slider-active">Доставка</a>
             </li>
-            <li>
+            <li class="servese-slider-item">
               <a href="#" class="js-servese-tabs">Гарантия</a>
             </li>
-            <li>
+            <li class="servese-slider-item">
               <a href="#" class="js-servese-tabs">Кредит</a>
             </li>
           </ul>
@@ -433,7 +435,7 @@
     </div>
   </footer>
 
-  <div class="js-map-modale popup-map hidden">
+  <div class="js-map-modale popup-map">
     <div class="iframe">
       <iframe title="Адрес компании на карте"
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cfc566d236d00d9fb38593831b7e65cd8dfeaa9be7239e379272db6b9f8bec5&amp;source=constructor"
@@ -443,28 +445,28 @@
     </div>
   </div>
 
-  <div class="js-form-modale form-popup hidden">
+  <div class="js-form-modale form-popup">
     <button type="button" class="button-close button-close--form" aria-label=" Закрыть окно"></button>
     <form class="form-flex-box" action="https://echo.htmlacademy.ru" method="post">
       <div class="form-flex-box-text">
         <label class="name">Ваше имя:
-          <input type="text" name="name" placeholder="Имя Фамилия" required>
+          <input type="text" class="js-name" name="name" placeholder="Имя Фамилия">
         </label>
         <label>Ваш e-mail:
-          <input type="email" name="email" placeholder="email@example.com" required>
+          <input type="email" class="js-email" name="email" placeholder="email@example.com">
         </label>
       </div>
       <div class="textarea-container">
         <label for="textarea" class="textarea">Текст письма:</label>
-        <textarea name="letter" placeholder="В свободной форме" id="textarea" required></textarea>
+        <textarea name="letter" placeholder="В свободной форме" id="textarea"></textarea>
       </div>
       <div class="button-container">
-        <button type="submit" class="button-submit">Отправить</button>
+        <button type="submit" class="button-submit js-submit">Отправить</button>
       </div>
     </form>
   </div>
 
-  <div class="js-cart-modale cart-popup-wrapper hidden">
+  <div class="js-cart-modale cart-popup-wrapper">
     <button type="button" class="button-close button-close--cart" aria-label="Закрыть окно"></button>
     <span>Товар добавлен в корзину!</span>
     <div class="link-cart-wrapper">
@@ -473,7 +475,7 @@
     </div>
   </div>
 
-<script src="./js/script.js"></script>
+  <script src="./js/min-script.js"></script>
 </body>
 
 </html>

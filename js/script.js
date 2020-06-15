@@ -1,45 +1,150 @@
-let servese_tab = document.querySelectorAll(".js-servese-tabs");
-let servese_tab_content = document.querySelectorAll(".js-servese-tabs-content");
-let map_modale = document.querySelector(".js-map-modale");
-let js_map_button = document.querySelector(".js-map");
-let close_button = document.querySelectorAll(".button-close")
-let cart_modale = document.querySelector(".js-cart-modale");
-let js_cartbutton = document.querySelectorAll(".js-cart");
-let contine_close = document.querySelector(".js-contine");
-let js_form = document.querySelector(".js-form");
-let js_form_modale = document.querySelector(".js-form-modale");
+let serveseTab = document.querySelectorAll(".js-servese-tabs");
+let serveseTabContent = document.querySelectorAll(".js-servese-tabs-content");
+
+let mapModale = document.querySelector(".js-map-modale");
+let jsMapButton = document.querySelector(".js-map");
+
+let closeButton = document.querySelectorAll(".button-close")
+
+let cartModale = document.querySelector(".js-cart-modale");
+let jsCartbutton = document.querySelectorAll(".js-cart");
+let contineClose = document.querySelector(".js-contine");
+
+let jsFormButton = document.querySelector(".js-form");
+let jsFormModale = document.querySelector(".js-form-modale");
+let jsName = document.querySelector(".js-name");
+let jsEmail = document.querySelector(".js-email");
+let jsSubmit = document.querySelector(".js-submit");
+let jsForm = document.querySelector(".form-flex-box");
 
 
 
-contine_close.addEventListener("click", function (evt) {
+contineClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  cart_modale.classList.remove("modal-show");
+  cartModale.classList.remove("modal-show");
 });
 
-for (let close_buttons of close_button) {
-  close_buttons.addEventListener("click", function (evt) {
+for (let closeButtons of closeButton) {
+  closeButtons.addEventListener("click", function (evt) {
     evt.preventDefault();
-    cart_modale.classList.remove("modal-show");
-    map_modale.classList.remove("modal-show");
-    js_form_modale.classList.remove("modal-show");
+    cartModale.classList.remove("modal-show");
+    if (jsFormButton && jsFormModale && mapModale && jsFormModale) {
+      mapModale.classList.remove("modal-show");
+      jsFormModale.classList.remove("modal-show");
+    }
   })
 };
 
-for (let cartbutton of js_cartbutton) {
+for (let cartbutton of jsCartbutton) {
   cartbutton.addEventListener("click", function (evt) {
     evt.preventDefault();
-    cart_modale.classList.add("modal-show");
+    cartModale.classList.add("modal-show");
   })
 };
 
-js_form.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  js_form_modale.classList.add("modal-show");
+if (jsFormButton && jsFormModale) {
+  jsFormButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    jsFormModale.classList.add("modal-show");
+  });
+};
+
+if (mapModale && jsMapButton) {
+  jsMapButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapModale.classList.add("modal-show");
+  });
+};
+
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (cartModale.classList.contains("modal-show")) {
+      evt.preventDefault();
+      cartModale.classList.remove("modal-show");
+    }
+    if (mapModale && jsMapButton) {
+      if (mapModale.classList.contains("modal-show")) {
+        evt.preventDefault();
+        mapModale.classList.remove("modal-show");
+      }
+    }
+    if (jsFormButton && jsFormModale) {
+      if (jsFormModale.classList.contains("modal-show")) {
+        evt.preventDefault();
+        jsFormModale.classList.remove("modal-show");
+        jsFormModale.classList.remove("modal-error");
+      }
+    }
+  }
 });
 
+if (jsFormButton && jsFormModale) {
+  jsForm.addEventListener("submit", function (evt) {
+    if (!jsName.value || !jsEmail.value) {
+      evt.preventDefault();
+      jsFormModale.classList.remove("modal-error");
+      jsFormModale.offsetWidth = jsFormModale.offsetWidth;
+      jsFormModale.classList.add("modal-error");
+    }
+  });
+};
 
-js_map_button.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  map_modale.classList.add("modal-show");
-});
+if (serveseTab && serveseTabContent) {
+  let hideContent = function () {
+    serveseTabContent.forEach(function (el) {
+      el.classList.add("hidden");
+    });
+  }
+  serveseTab.forEach(function (el, index) {
+    el.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      activeTab = document.querySelector(".servese-slider-active");
+      activeTab.classList.remove("servese-slider-active");
+      hideContent();
+      if (serveseTabContent[index]) {
+        serveseTabContent[index].classList.remove("hidden");
+      }
+      el.classList.add("servese-slider-active");
+    })
+  });
+};
 
+let buttonArrow = document.querySelectorAll(".button-slide");
+let mainSlider = document.querySelectorAll(".js-slider");
+let mainSliderButton = document.querySelectorAll(".button-slide-active");
+
+
+let hideSlideContent = function () {
+  mainSlider.forEach(function (el) {
+    el.classList.add("hidden");
+  });
+};
+
+if (mainSlider && mainSliderButton) {
+  mainSliderButton.forEach(function (el, index) {
+    el.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      let sliderButton = document.querySelector(".button-slide-active-current");
+      sliderButton.classList.remove("button-slide-active-current");
+      hideSlideContent();
+      if (mainSlider[index]) {
+        mainSlider[index].classList.remove("hidden");
+      }
+      el.classList.add("button-slide-active-current");
+    });
+  });
+  buttonArrow.forEach(function (el, index) {
+    el.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      let sliderButton = document.querySelector(".button-slide-active-current");
+      sliderButton.classList.remove("button-slide-active-current");
+      hideSlideContent();
+      if (mainSlider[index]) {
+        mainSlider[index].classList.remove("hidden");
+      }
+      mainSliderButton[index].classList.add("button-slide-active-current");
+    });
+  })
+
+};

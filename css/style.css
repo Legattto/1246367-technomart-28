@@ -105,6 +105,7 @@ body address {
   --basic-green: #63A63E;
   --basic-gray: #3D546F;
   --basic-graylight: #C5C5C5;
+  --button-graylight: #E5E5E5;
   --basic-background: #F1F5F7;
   --white: #ffffff;
   --special-yellow: #FFBF47;
@@ -140,6 +141,7 @@ body address {
   --frompopup-shadow: rgba(0, 0, 0, 0.75);
   --button-form-back: #F4F4F4;
   --cart-popap-shadow: rgba(41, 52, 73, 0.75);
+
 }
 
 /* Настройки основные  */
@@ -196,6 +198,8 @@ a {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
   font-weight: normal;
 }
 
@@ -669,11 +673,13 @@ a {
 /* Размер заголовков */
 .main-services-grid h3 {
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 14px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  padding-right: 10px;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  width: 300px;
 }
 
 /* Размер заголовков ссылок */
@@ -752,25 +758,22 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+
 }
 
 /* Надписи на слайдере */
 .slider {
   width: 620px;
   min-height: 266px;
-  position: relative;
   background-repeat: no-repeat;
-  box-shadow: inset 0px 104px var(--box-shadow);
+
 }
 
-/* Бекграунд слайдов */
-
-.slide-1 {
-  background-image: url("../img/Perfotrators.jpg");
-}
-
-.slide-2 {
-  background-image: url("../img/Drills.jpg");
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .slider h3 {
@@ -781,29 +784,34 @@ a {
   padding: 0;
   margin: 0;
   padding-bottom: 5px;
-  top: 0;
-  left: 0;
+  padding-top: 22px;
+  padding-left: 24px;
+  padding-right: 20px;
+}
+
+.slider span {
+  padding: 2px 24px;
 }
 
 /* Позиционирование слайд контента */
 .slider-list-item {
   display: flex;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  width: 620px;
+  min-height: 266px;
   flex-direction: column;
-  padding-left: 24px;
-  padding-top: 23px;
-  padding-bottom: 27px;
-  padding-right: 20px;
+  box-shadow: inset 0px 104px var(--box-shadow);
 }
 
 /* Позиционирование ссылки */
 .slider-list-item a {
   padding: 10px;
+  padding-top: 9px;
   margin-top: 113px;
   width: 192px;
   min-height: 38px;
   background-color: var(--basic-red);
+  margin-left: 24px;
 }
 
 /* Левая кнопка на слайде */
@@ -816,7 +824,7 @@ a {
   background-color: transparent;
   position: absolute;
   top: 122px;
-  padding: 0;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -833,14 +841,6 @@ a {
   transform: scaleX(-1);
   right: 20px;
   padding: 0;
-}
-
-.slide-hidden {
-  display: none;
-}
-
-.slide-current {
-  display: block;
 }
 
 .button-slide-active {
@@ -997,6 +997,10 @@ a {
   margin-bottom: 5px;
 }
 
+.card-img-wrapper img {
+  background-color: var(--title-color);
+}
+
 /* Всплывающе менюшка для карточек товаров */
 .buy-cart {
   width: 100%;
@@ -1008,11 +1012,11 @@ a {
   top: 0;
 }
 
-.list-flex li:hover .buy-cart {
+.list-flex-item:hover .buy-cart {
   display: block;
 }
 
-.list-catatlog-flex-box li:hover .buy-cart {
+.list-catatlog-flex-box-item:hover .buy-cart {
   display: block;
 }
 
@@ -1115,14 +1119,6 @@ a {
   margin-bottom: 32px;
 }
 
-/* Другой отступ внутри ссылки */
-.manifactoure-sec .sec-title a {
-  padding-top: 11px;
-  padding-right: 38px;
-  padding-bottom: 9px;
-  padding-left: 39px;
-}
-
 /* Флекс для производителей */
 
 .manf-flex-list {
@@ -1144,7 +1140,7 @@ a {
   margin-right: 0;
 }
 
-.manf-flex-list li a {
+.manf-flex-list a {
   display: flex;
   width: 220px;
   border: 1px solid var(--lightgray);
@@ -1245,9 +1241,8 @@ a {
   padding-left: 22px;
   width: 100%;
   height: 100%;
-  padding-top: 17px;
-  margin-top: -3px;
-  padding-bottom: 17px;
+  padding-top: 14px;
+  padding-bottom: 18px;
 }
 
 /* Сервис слайд контент */
@@ -1261,8 +1256,8 @@ a {
 
 /* эффекты переключателся слайд контента */
 
-.servese-slider li a:hover,
-.servese-slider li a:focus {
+.servese-slider-item a:hover,
+.servese-slider-item a:focus {
   background-color: var(--hover-color);
 }
 
@@ -1367,7 +1362,7 @@ a {
 .text-section-flex {
   display: flex;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 60px;
   margin-bottom: 70px;
 }
 
@@ -1478,6 +1473,7 @@ a {
   width: 300px;
   min-height: 158px;
   margin-bottom: 25px;
+  background-color: var(--lightgray);
 }
 
 /* Сылка формы */
@@ -1492,6 +1488,8 @@ a {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  padding: 10px;
+
 }
 
 /* Эффекты ссылки */
@@ -1666,7 +1664,6 @@ a {
   margin: 0;
   padding: 0;
   align-items: center;
-  justify-content: space-between;
   margin-top: 3px;
   margin-left: 43px;
 }
@@ -1882,6 +1879,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   left: 120%;
+  pointer-events: none;
 }
 
 .personal-area {
@@ -1896,19 +1894,11 @@ a {
   color: var(--basic-red);
 }
 
-.my-order:hover::after,
-.my-order:focus::after {
-  background-color: var(--basic-red);
-}
-
 .my-order:active,
 .personal-area:active {
   color: var(--basic-graylight);
 }
 
-.my-order:active::after {
-  background-color: var(--basic-graylight);
-}
 
 /* Главное содержимое каталога */
 
@@ -2451,7 +2441,7 @@ input::-webkit-inner-spin-button {
 .catalog-page-list a {
   display: flex;
   padding: 9px 15px;
-  border: 1px solid var(--some-color);
+  border: 1px solid var(--button-graylight);
   border-radius: 2px;
   color: var(--black);
   font-family: "PT Sans", Arial, sans-serif;
@@ -2478,6 +2468,7 @@ input::-webkit-inner-spin-button {
 .catalog-page-list .active-page {
   background-color: var(--basic-red);
   border-radius: 2px;
+  border: none;
   color: var(--white);
   pointer-events: none;
 }
@@ -2515,10 +2506,12 @@ input::-webkit-inner-spin-button {
 
 /* Всплывающие окна */
 .popup-map {
+  visibility: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -300%);
+  transition: transform 0.3s ease-in, visibility 0.3s ease-in 0.3s;
   width: 943px;
   height: 449px;
   box-shadow: 0px 4px 20px var(--box-shadow);
@@ -2573,12 +2566,14 @@ input::-webkit-inner-spin-button {
 /* Попап с формой  */
 
 .form-popup {
+  visibility: hidden;
   width: 620px;
   min-height: 430px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -300%);
+  transition: transform 0.3s ease-in, visibility 0.3s ease-in 0.3s;
   box-shadow: 0px 20px 40px var(--frompopup-shadow);
   color: var(--black);
   background-color: var(--white);
@@ -2678,12 +2673,14 @@ input::-webkit-inner-spin-button {
 
 /* Попап с карзиной */
 .cart-popup-wrapper {
+  visibility: hidden;
   width: 620px;
   min-height: 282px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -300%);
+  transition: transform 0.3s ease-in, visibility 0.3s ease-in 0.3s;
   box-shadow: 0px 20px 40px var(--cart-popap-shadow);
   background-color: var(--white);
   z-index: 99;
@@ -2786,17 +2783,35 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-show {
-  display: block;
-  animation: stretch;
-  animation-duration: 1s;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in, visibility 0.3s ease-in;
 }
 
-@keyframes stretch {
-  0% {
-    transform: scale(0);
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
   }
 
-  100% {
-    transform: scale(1);
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-52%, -50%);
   }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-48%, -50%);
+  }
+}
+
+.modal-error {
+  animation: shake 0.2s;
 }
