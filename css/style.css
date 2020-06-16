@@ -801,6 +801,8 @@ a {
   min-height: 266px;
   flex-direction: column;
   box-shadow: inset 0px 104px var(--box-shadow);
+  z-index: 1;
+  background-color: var(--linethough);
 }
 
 /* Позиционирование ссылки */
@@ -826,6 +828,7 @@ a {
   top: 122px;
   padding: 10px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .button-slide--left {
@@ -854,6 +857,7 @@ a {
   border-radius: 50%;
   background-color: var(--white);
   cursor: pointer;
+  z-index: 1;
 }
 
 .button-slide-active--left {
@@ -1095,7 +1099,6 @@ a {
 .prise-linethrough {
   text-decoration-line: line-through;
   color: var(--linethough);
-  margin-top: 6px;
 }
 
 .prise-linethrough--index {
@@ -1103,7 +1106,8 @@ a {
 }
 
 /* Цена в красном блоке */
-.prise-holder {
+.list-catatlog-flex-box .prise-holder,
+.prise-holder{
   margin-top: auto;
   background-image: url("../img/red-button.png");
   background-repeat: no-repeat;
@@ -1118,7 +1122,9 @@ a {
   margin-top: 50px;
   margin-bottom: 32px;
 }
-
+.manifactoure-sec .sec-link {
+  padding-left: 40px;
+}
 /* Флекс для производителей */
 
 .manf-flex-list {
@@ -1420,9 +1426,14 @@ a {
   height: 2px;
   left: 0;
   background-color: var(--basic-red);
+  margin-top: 12px;
+}
+.text-section li:first-child::before {
+  margin-top: 15px;
+}
+.text-section li:last-child::before {
   margin-top: 10px;
 }
-
 /* Ссылка */
 .text-section a {
   display: flex;
@@ -1798,19 +1809,20 @@ a {
   justify-content: center;
   position: relative;
   margin-left: 10px;
+  padding: 20px;
 }
 
 .user svg {
   fill: var(--basic-graylight);
   position: absolute;
   text-align: center;
-  left: 20%;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 7px;
+  top: 10px;
 }
 
 /* Имя аккаунта */
 .useracc {
+  padding: 5px;
   font-size: 21px;
   line-height: 21px;
   color: var(--black);
@@ -1825,6 +1837,7 @@ a {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 10px 20px;
 }
 
 .logout svg {
@@ -1835,6 +1848,9 @@ a {
   top: 0;
 }
 
+.contacts {
+  max-width: 300px;
+}
 /* Эффекты при наведении */
 
 .user:hover svg,
@@ -2128,6 +2144,7 @@ input::-webkit-inner-spin-button {
 .checkbox-box label,
 .radio-box label {
   padding-left: 35px;
+  display: flex;
   cursor: pointer;
 }
 
@@ -2149,6 +2166,9 @@ input::-webkit-inner-spin-button {
 }
 
 .checkbox-box input:disabled+label:before {
+  opacity: 0.2;
+}
+.checkbox-box input:disabled+label{
   opacity: 0.2;
 }
 
@@ -2416,6 +2436,7 @@ input::-webkit-inner-spin-button {
   font-size: 17px;
   line-height: 18px;
   text-align: center;
+  padding: 5px;
 }
 
 /* Кнопки страниц */
