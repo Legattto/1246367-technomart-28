@@ -1103,6 +1103,7 @@ a {
 
 .prise-linethrough--index {
   margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 /* Цена в красном блоке */
@@ -1656,13 +1657,13 @@ a {
   min-height: 107px;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .copyright {
   margin-top: 10px;
   margin-left: 2px;
   flex-shrink: 0;
-  width: 340px;
   min-height: 48px;
   font-size: 16px;
   line-height: 18px;
@@ -1672,11 +1673,15 @@ a {
 .social-icons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
   align-items: center;
+  flex-grow: 1;
   margin-top: 3px;
-  margin-left: 43px;
+  margin-left: 86px;
+  margin-right: 43px;
+  max-width: 40%;
 }
 
 .social-icons li {
@@ -1726,20 +1731,19 @@ a {
 .developers {
   display: flex;
   align-items: center;
-  margin-left: 54px;
+  justify-content: flex-end;
   font-size: 16px;
   line-height: 18px;
+  margin-left: auto;
 }
 
 .mail {
   width: 180px;
-  padding-left: 60px;
   padding-bottom: 3px;
 }
-
 .developer {
-  width: 180px;
-  padding-left: 69px;
+  width: 120px;
+  padding-left: 11px;
   padding-bottom: 3px;
 }
 
@@ -2166,13 +2170,10 @@ input::-webkit-inner-spin-button {
 }
 
 .checkbox-box input:disabled+label:before {
-  opacity: 0.2;
+  opacity: 0.4;
 }
 .checkbox-box input:disabled+label{
-  opacity: 0.2;
-}
-
-.checkbox-box input:disabled+label {
+  opacity: 0.4;
   pointer-events: none;
 }
 
@@ -2246,11 +2247,12 @@ input::-webkit-inner-spin-button {
 }
 
 .radio-box input:disabled+label:before {
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .radio-box input:disabled+label {
   pointer-events: none;
+  opacity: 0.4;
 }
 
 .radio-box input:checked+label::after {
@@ -2437,6 +2439,7 @@ input::-webkit-inner-spin-button {
   line-height: 18px;
   text-align: center;
   padding: 5px;
+  margin-bottom: 8px;
 }
 
 /* Кнопки страниц */
